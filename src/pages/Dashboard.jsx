@@ -11,7 +11,7 @@ import {
   ChevronRight, Disc3, Clock, MessageSquare, Plus, Info,
   ChevronDown, Edit2, Check, X
 } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+const logoImg = '/logo.png'; // Using static path from public folder
 
 const formatTime = (seconds) => {
   if (!seconds || isNaN(seconds)) return '0:00';
