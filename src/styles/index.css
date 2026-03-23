@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* ============================================================
+   SKELETON DESIGN SYSTEM
+   Minimalist. High-Contrast. Purposeful.
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f4f4f4;
+    --color-bg-card: #ffffff;
+    --color-bg-elevated: #ffffff;
+
+    --color-accent: #000000;
+    --color-accent-dim: #333333;
+    --color-accent-glow: transparent;
+
+    --color-text-primary: #000000;
+    --color-text-secondary: #444444;
+    --color-text-muted: #888888;
+
+    --color-border: #eeeeee;
+    --color-border-accent: #000000;
+
+    /* Status Colors */
+    --color-status-queued: #666666;
+    --color-status-progress: #666666;
+    --color-status-review: #666666;
+    --color-status-revision: #666666;
+    --color-status-finalized: #666666;
+
+    /* Typography */
+    --font-display: sans-serif;
+    --font-body: sans-serif;
+
+    /* Spacing & Radius */
+    --radius-sm: 0;
+    --radius-md: 0;
+    --radius-lg: 0;
+    --radius-xl: 0;
+
+    /* Aura Ring */
+    --color-focus-aura: rgba(59, 130, 246, 0.5);
+    --color-focus-border: #3b82f6;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  ::selection {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  /* Global Input Fixes */
+  input, textarea, select {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    @apply transition-all duration-300;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--color-focus-border) !important;
+    box-shadow: 0 0 15px var(--color-focus-aura) !important;
+    outline: none !important;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #666 !important;
+  }
+}
+
+/* ============================================================
+   UTILITY CLASSES (SKELETON VERSION)
+   ============================================================ */
+
+@layer utilities {
+  .glass {
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  .glass-accent {
+    background: #eeeeee;
+    border: 1px solid #000000;
+  }
+
+  .text-accent { color: var(--color-accent); }
+  .text-muted  { color: var(--color-text-secondary); }
+
+  .bg-card     { background-color: var(--color-bg-card); border: 1px solid #eee; }
+  .bg-elevated { background-color: var(--color-bg-elevated); border: 1px solid #eee; }
+
+  .gradient-text {
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: #000000;
+  }
+
+  .glow-accent {
+    box-shadow: none;
+  }
+
+  .border-subtle { border: 1px solid #eeeeee; }
+  .border-accent  { border: 1px solid #000000; }
+}

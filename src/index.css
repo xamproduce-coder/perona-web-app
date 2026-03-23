@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0a0f1d;
+  --color-navy-800: #101625;
+  --color-navy-700: #1a2235;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-primary: #f97316; /* Orange CTA */
+  --color-primary-hover: #ea580c;
+}
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Glassmorphism utility */
+@layer utilities {
+  .glass {
+    background: rgba(26, 34, 53, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Premium Buttons */
+  .btn-premium {
+    @apply px-8 py-4 rounded-full font-black text-[10px] uppercase tracking-[0.3em] transition-all duration-300 active:scale-95 shadow-lg border border-white/10;
+  }
+
+  .btn-glow {
+    @apply bg-[#f26422] text-white hover:bg-orange-600 hover:shadow-[0_10px_40px_rgba(242,100,34,0.4)] border-none;
+  }
+
+  .btn-ghost {
+    @apply bg-white/5 text-white/40 hover:text-white hover:bg-white/10;
+  }
+}
