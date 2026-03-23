@@ -18,6 +18,7 @@ import Account     from './pages/Account';
 import Admin       from './pages/Admin';
 import MixMyTrack  from './pages/MixMyTrack';
 import UploadHub   from './pages/UploadHub';
+import Photography from './pages/Photography';
 
 // ─── Auth Guard ──────────────────────────────────────────────
 function ProtectedRoute({ children }) {
@@ -47,6 +48,7 @@ function AppShell() {
             <Route path="/login"         element={<Login />} />
             <Route path="/register"      element={<Register />} />
             <Route path="/mix-my-track"  element={<MixMyTrack />} />
+            <Route path="/photography"   element={<Photography />} />
 
             {/* Artist Protected */}
             <Route path="/order"       element={<ProtectedRoute><Order /></ProtectedRoute>} />
